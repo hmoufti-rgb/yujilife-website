@@ -1,4 +1,4 @@
-backend:
+yamlbackend:
   name: github
   repo: hmoufti-rgb/yujilife-website
   branch: main
