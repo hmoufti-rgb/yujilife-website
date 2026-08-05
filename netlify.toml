@@ -1,10 +1,2 @@
-# ============================================================
-# Netlify configuration for yujilife.org
-# ============================================================
-
 [build]
   publish = "."
-
-# Enable Netlify Identity + Git Gateway for Decap CMS
-[[plugins]]
-  package = "@netlify/plugin-identity-widget"
