@@ -1,1 +1,440 @@
-file:///C:/Users/moufti/Downloads/index_1.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yujilife — Compassion in action</title>
+<meta name="description" content="Yujilife (HOPE) is a humanitarian association: animal welfare, environmental protection, women's empowerment, and inclusive education for children with special needs — built on UN human standards and values.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1B4332;
+  --forest-deep:#122A20;
+  --moss:#40916C;
+  --sage:#74C69D;
+  --sand:#F5F1E8;
+  --sand-deep:#EAE3D3;
+  --gold:#C9A227;
+  --gold-deep:#A9861A;
+  --ink:#1D2621;
+  --paper:#FFFFFF;
+  --shadow:0 18px 40px -20px rgba(18,42,32,.45);
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Source Sans 3",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--sand);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em}
+.eyebrow{font-family:var(--sans);font-weight:700;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.95rem;padding:.85rem 1.6rem;border-radius:999px;transition:transform .15s ease,box-shadow .2s ease,background .2s}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn-gold{background:var(--gold);color:var(--forest-deep)}
+.btn-gold:hover{background:var(--gold-deep);transform:translateY(-2px)}
+.btn-ghost{border:2px solid rgba(255,255,255,.6);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.btn-forest{background:var(--forest);color:#fff}
+.btn-forest:hover{background:var(--forest-deep);transform:translateY(-2px)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:var(--forest);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:1rem}
+.brand{display:flex;align-items:center;gap:.65rem;font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:.02em}
+.brand .mark{width:38px;height:38px;flex:none}
+.brand small{display:block;font-family:var(--sans);font-weight:600;font-size:.6rem;letter-spacing:.22em;color:var(--sage);text-transform:uppercase;margin-top:2px}
+.menu{display:flex;align-items:center;gap:1.6rem;font-weight:600;font-size:.95rem}
+.menu a{padding:.3rem 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s}
+.menu a:hover{border-color:var(--gold);color:var(--sage)}
+.nav-cta{display:flex;align-items:center;gap:.7rem}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+
+/* Hero */
+.hero{position:relative;background:
+   radial-gradient(120% 90% at 80% 0%,rgba(64,145,108,.55),transparent 60%),
+   linear-gradient(160deg,var(--forest-deep),var(--forest) 55%,var(--moss));
+   color:#fff;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:5rem 0 6.5rem}
+.hero h1{font-size:clamp(2.6rem,5.5vw,4.4rem);font-weight:600}
+.hero h1 em{font-style:italic;color:var(--sage)}
+.hero p.lead{font-size:1.2rem;max-width:34ch;margin:1.4rem 0 2rem;color:rgba(255,255,255,.88)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.hope-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:22px;padding:2rem;box-shadow:var(--shadow)}
+.hope-card h3{font-size:1.5rem;margin-bottom:.2rem}
+.hope-card .acro{font-family:var(--sans);font-weight:700;letter-spacing:.14em;color:var(--gold);font-size:.8rem;text-transform:uppercase}
+.hope-list{list-style:none;margin-top:1.1rem;display:grid;gap:.7rem}
+.hope-list li{display:flex;gap:.7rem;align-items:flex-start;font-size:.98rem;color:rgba(255,255,255,.9)}
+.hope-list b{color:var(--sage);font-family:var(--serif);font-weight:600}
+.brush{display:block;width:100%;height:60px;color:var(--sand);margin-top:-1px}
+
+/* Stat band */
+.stats{background:var(--sand);padding:3rem 0}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.stat .num{font-family:var(--serif);font-weight:700;font-size:2.9rem;color:var(--forest);line-height:1}
+.stat .lbl{font-weight:600;color:var(--moss);margin-top:.4rem;font-size:.95rem}
+
+/* Section base */
+section{padding:5rem 0}
+.section-head{max-width:60ch;margin-bottom:2.6rem}
+.section-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:.5rem 0 .8rem}
+.section-head p{color:#4a5751;font-size:1.08rem}
+
+/* Pillars */
+.pillars{background:var(--paper)}
+.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.pillar{position:relative;border-radius:18px;padding:2rem 1.7rem;background:var(--sand);border:1px solid var(--sand-deep);transition:transform .2s,box-shadow .2s;overflow:hidden}
+.pillar:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.pillar .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--forest);color:var(--sage);margin-bottom:1.1rem}
+.pillar h3{font-size:1.35rem;margin-bottom:.5rem;color:var(--forest)}
+.pillar p{color:#4a5751;font-size:.98rem}
+.pillar .tag{position:absolute;top:1.1rem;right:1.1rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);background:rgba(201,162,39,.14);padding:.25rem .6rem;border-radius:999px}
+
+/* Training centre feature */
+.training{background:linear-gradient(160deg,var(--forest),var(--forest-deep));color:#fff}
+.training-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.training h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:.6rem 0 1rem}
+.training p{color:rgba(255,255,255,.85);margin-bottom:1.4rem}
+.course-list{display:grid;gap:.8rem}
+.course{display:flex;gap:1rem;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:1rem 1.2rem}
+.course .n{font-family:var(--serif);font-weight:700;color:var(--gold);font-size:1.3rem;flex:none;width:2ch}
+.course b{display:block;font-family:var(--serif);font-size:1.08rem}
+.course span{font-size:.9rem;color:rgba(255,255,255,.75)}
+
+/* UN standards */
+.standards{background:var(--sand)}
+.std-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.principles{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.principle{background:var(--paper);border-radius:14px;padding:1.3rem;border-left:4px solid var(--moss)}
+.principle b{font-family:var(--serif);color:var(--forest);font-size:1.05rem;display:block;margin-bottom:.2rem}
+.principle span{font-size:.9rem;color:#556;}
+.pledge{background:var(--forest);color:#fff;border-radius:20px;padding:2.2rem;box-shadow:var(--shadow)}
+.pledge h3{font-size:1.6rem;margin-bottom:.8rem}
+.pledge ul{list-style:none;display:grid;gap:.8rem}
+.pledge li{display:flex;gap:.6rem;align-items:flex-start;color:rgba(255,255,255,.9);font-size:.98rem}
+.pledge li::before{content:"✓";color:var(--gold);font-weight:800}
+
+/* News */
+.news{background:var(--paper)}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.card{background:var(--sand);border-radius:16px;overflow:hidden;border:1px solid var(--sand-deep);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card .ph{height:170px;background:linear-gradient(135deg,var(--moss),var(--sage));position:relative}
+.card .cat{position:absolute;bottom:.8rem;left:.8rem;background:var(--forest);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border-radius:999px}
+.card .body{padding:1.3rem}
+.card .date{font-size:.8rem;color:var(--moss);font-weight:600}
+.card h3{font-size:1.2rem;margin:.4rem 0;color:var(--forest)}
+.card p{font-size:.92rem;color:#4a5751}
+
+/* Act CTA */
+.act{background:linear-gradient(160deg,var(--moss),var(--forest));color:#fff;text-align:center}
+.act h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem}
+.act p{max-width:52ch;margin:0 auto 2rem;color:rgba(255,255,255,.9);font-size:1.1rem}
+.act-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* Contact */
+.contact{background:var(--sand)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact form{display:grid;gap:1rem}
+.field{display:grid;gap:.35rem}
+.field label{font-weight:600;font-size:.9rem;color:var(--forest)}
+.field input,.field textarea{font-family:var(--sans);font-size:1rem;padding:.8rem 1rem;border:1.5px solid var(--sand-deep);border-radius:12px;background:#fff}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--moss)}
+.info-block{display:grid;gap:1.3rem;align-content:start}
+.info-item b{font-family:var(--serif);color:var(--forest);display:block}
+.info-item span{color:#4a5751}
+
+/* Footer */
+footer{background:var(--forest-deep);color:rgba(255,255,255,.82);padding:3.5rem 0 1.5rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+.foot-grid h4{color:#fff;font-size:1rem;margin-bottom:1rem;letter-spacing:.02em}
+.foot-grid a{display:block;padding:.28rem 0;font-size:.92rem;color:rgba(255,255,255,.72)}
+.foot-grid a:hover{color:var(--sage)}
+.foot-brand p{font-size:.92rem;max-width:32ch;margin-top:.8rem}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1.4rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.55)}
+
+@media(max-width:900px){
+  .hero-grid,.training-grid,.std-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
+  .pillar-grid,.news-grid{grid-template-columns:1fr 1fr}
+  .stat-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .menu,.nav-cta .btn-forest{display:none}
+  .burger{display:block}
+  .menu.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--forest);padding:1rem 6vw 1.5rem;gap:.9rem}
+}
+@media(max-width:560px){
+  .pillar-grid,.news-grid,.principles{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#top">
+   <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+     <circle cx="20" cy="20" r="19" fill="#40916C"/>
+     <path d="M20 30c-6-4-10-8-10-13a5 5 0 0 1 10-2 5 5 0 0 1 10 2c0 5-4 9-10 13z" fill="#F5F1E8"/>
+     <path d="M20 11c2 3 2 6 0 9-2-3-2-6 0-9z" fill="#C9A227"/>
+   </svg>
+   <span>YUJILIFE<small>HOPE · Compassion in action</small></span>
+  </a>
+  <nav class="menu" id="menu">
+   <a href="#mission">Mission</a>
+   <a href="#pillars">Programs</a>
+   <a href="#training">Training Centre</a>
+   <a href="#standards">UN Standards</a>
+   <a href="#news">News</a>
+   <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-cta">
+   <a class="btn btn-gold" href="#act">Support us</a>
+   <button class="burger" aria-label="Toggle menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  </div>
+ </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="eyebrow" style="color:var(--sage)">Humanitarian association · Est. 2024</span>
+   <h1>Protecting life, <em>with dignity</em> — for animals, people and the planet.</h1>
+   <p class="lead">Yujilife works where compassion is needed most: caring for animals, protecting the environment, empowering women, and opening education to every child.</p>
+   <div class="hero-cta">
+    <a class="btn btn-gold" href="#act">Get involved</a>
+    <a class="btn btn-ghost" href="#mission">Our mission</a>
+   </div>
+  </div>
+  <aside class="hope-card">
+   <span class="acro">The meaning of HOPE</span>
+   <h3>Helping Orphans, Protecting Everywhere</h3>
+   <ul class="hope-list">
+    <li><b>H</b><span>Humane care for animals in need</span></li>
+    <li><b>O</b><span>Open, inclusive education for every child</span></li>
+    <li><b>P</b><span>Protecting the environment and its creatures</span></li>
+    <li><b>E</b><span>Empowering women and vulnerable communities</span></li>
+   </ul>
+  </aside>
+ </div>
+ <svg class="brush" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+  <path fill="currentColor" d="M0,40 C240,10 480,55 720,38 C960,22 1200,55 1440,30 L1440,60 L0,60 Z"/>
+ </svg>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="mission" style="padding-top:2rem">
+ <div class="wrap">
+  <div class="section-head" style="margin-bottom:2rem">
+   <span class="eyebrow">Who we are</span>
+   <h2>A single association, four promises to keep</h2>
+   <p>Registered as Association No. 2403, Yujilife brings humanitarian and environmental work together under one roof — guided by the belief that the wellbeing of animals, people and nature cannot be separated.</p>
+  </div>
+  <div class="stat-grid">
+   <div class="stat"><div class="num">4</div><div class="lbl">Program pillars</div></div>
+   <div class="stat"><div class="num">2024</div><div class="lbl">Founded</div></div>
+   <div class="stat"><div class="num">1</div><div class="lbl">Training centre</div></div>
+   <div class="stat"><div class="num">UN</div><div class="lbl">Human standards</div></div>
+  </div>
+ </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars" id="pillars">
+ <div class="wrap">
+  <div class="section-head">
+   <span class="eyebrow">What we do</span>
+   <h2>Our programs</h2>
+   <p>Four areas of work, one mission of compassion. Each program is run with local partners and measured against clear humanitarian standards.</p>
+  </div>
+  <div class="pillar-grid">
+   <article class="pillar">
+    <div class="ic">
+     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21c-4-2.5-7-5.5-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 12c0 3.5-3 6.5-7 9z"/></svg>
+    </div>
+    <h3>Animal welfare</h3>
+    <p>Rescue, shelter, sterilisation and rehoming — and standing up against cruelty wherever we find it.</p>
+   </article>
+   <article class="pillar">
+    <div class="ic">
+     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z"/><path d="M12 22v-8"/></svg>
+    </div>
+    <h3>Environmental protection</h3>
+    <p>Reforestation, clean-up drives and awareness campaigns that protect habitats for people and wildlife alike.</p>
+   </article>
+   <article class="pillar">
+    <div class="ic">
+     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+    </div>
+    <h3>Women's empowerment</h3>
+    <p>Skills training, livelihood support and safe spaces that help women lead and provide for their families.</p>
+   </article>
+   <article class="pillar">
+    <span class="tag">Inclusive</span>
+    <div class="ic">
+     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg>
+    </div>
+    <h3>Inclusive education</h3>
+    <p>Learning designed for every child, including those with special needs — because education is a right, not a privilege.</p>
+   </article>
+   <article class="pillar">
+    <div class="ic">
+     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+    </div>
+    <h3>Community & shelter</h3>
+    <p>Practical relief and safe spaces for orphans and vulnerable families, delivered with respect and care.</p>
+   </article>
+   <article class="pillar">
+    <div class="ic">
+     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 15l-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg>
+    </div>
+    <h3>Awareness & advocacy</h3>
+    <p>Campaigns and outreach that change how communities treat animals, the environment and one another.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- TRAINING CENTRE -->
+<section class="training" id="training">
+ <div class="wrap training-grid">
+  <div>
+   <span class="eyebrow" style="color:var(--gold)">New</span>
+   <h2>The Yujilife Training Centre</h2>
+   <p>A place to learn, practise and grow. Our centre equips volunteers, caregivers and community members with the practical skills to carry our mission forward — from animal first aid to inclusive teaching methods.</p>
+   <a class="btn btn-gold" href="#contact">Enrol or partner with us</a>
+  </div>
+  <div class="course-list">
+   <div class="course"><span class="n">01</span><div><b>Animal care & first response</b><span>Handling, welfare and emergency basics for volunteers and staff.</span></div></div>
+   <div class="course"><span class="n">02</span><div><b>Inclusive education methods</b><span>Teaching techniques for children with special needs.</span></div></div>
+   <div class="course"><span class="n">03</span><div><b>Women's vocational skills</b><span>Craft, literacy and livelihood training that builds independence.</span></div></div>
+   <div class="course"><span class="n">04</span><div><b>Environmental stewardship</b><span>Sustainable practices, clean-up and community greening.</span></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- UN STANDARDS -->
+<section class="standards" id="standards">
+ <div class="wrap std-grid">
+  <div>
+   <span class="eyebrow">Our commitment</span>
+   <h2 style="font-size:clamp(2rem,3.6vw,2.9rem);margin:.5rem 0 1rem">UN human standards & values</h2>
+   <p style="color:#4a5751;margin-bottom:1.6rem">Every program we run is anchored in internationally recognised human-rights principles — with special attention to the dignity of women and children with special needs.</p>
+   <div class="principles">
+    <div class="principle"><b>Dignity</b><span>Every person is treated with respect, regardless of ability or circumstance.</span></div>
+    <div class="principle"><b>Inclusion</b><span>No child is left out — accessibility is built into how we teach and care.</span></div>
+    <div class="principle"><b>Equality</b><span>Equal opportunity and voice for women in every community we serve.</span></div>
+    <div class="principle"><b>Protection</b><span>Safeguarding the vulnerable is at the heart of everything we do.</span></div>
+   </div>
+  </div>
+  <aside class="pledge">
+   <h3>Our pledge</h3>
+   <ul>
+    <li>Uphold the rights of children with special needs to learn and thrive</li>
+    <li>Champion the safety, health and empowerment of women</li>
+    <li>Act transparently and account for every resource entrusted to us</li>
+    <li>Treat animals and the environment as part of one shared community of life</li>
+   </ul>
+  </aside>
+ </div>
+</section>
+
+<!-- NEWS -->
+<section class="news" id="news">
+ <div class="wrap">
+  <div class="section-head">
+   <span class="eyebrow">Latest</span>
+   <h2>News & stories</h2>
+   <p>Updates from the field. Halla can add and edit these posts directly through the site's content manager.</p>
+  </div>
+  <div class="news-grid">
+   <article class="card">
+    <div class="ph"><span class="cat">Animal welfare</span></div>
+    <div class="body"><div class="date">Coming soon</div><h3>Rescue and rehoming updates</h3><p>Share the stories of the animals your support has helped this season.</p></div>
+   </article>
+   <article class="card">
+    <div class="ph" style="background:linear-gradient(135deg,var(--gold),var(--gold-deep))"><span class="cat">Education</span></div>
+    <div class="body"><div class="date">Coming soon</div><h3>Inclusive classroom opens</h3><p>Announce new learning spaces designed for children with special needs.</p></div>
+   </article>
+   <article class="card">
+    <div class="ph" style="background:linear-gradient(135deg,var(--forest),var(--moss))"><span class="cat">Women</span></div>
+    <div class="body"><div class="date">Coming soon</div><h3>Vocational graduates</h3><p>Celebrate the women completing skills training at the centre.</p></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- ACT -->
+<section class="act" id="act">
+ <div class="wrap">
+  <span class="eyebrow" style="color:var(--gold)">Take action</span>
+  <h2>Compassion needs company</h2>
+  <p>Whether you give, volunteer or spread the word, you become part of Yujilife's work for animals, people and the planet.</p>
+  <div class="act-row">
+   <a class="btn btn-gold" href="#contact">Volunteer</a>
+   <a class="btn btn-ghost" href="#contact">Partner with us</a>
+   <a class="btn btn-ghost" href="#contact">Donate</a>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+ <div class="wrap contact-grid">
+  <div>
+   <span class="eyebrow">Get in touch</span>
+   <h2 style="font-size:clamp(2rem,3.4vw,2.7rem);margin:.5rem 0 1rem">Reach out to Yujilife</h2>
+   <p style="color:#4a5751;margin-bottom:1.5rem">Questions, partnerships, volunteering or press — send us a message and we'll reply as soon as we can.</p>
+   <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+    <input type="hidden" name="form-name" value="contact">
+    <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+    <div class="field"><label for="name">Name</label><input id="name" name="name" required></div>
+    <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required></div>
+    <div class="field"><label for="subject">Subject</label><input id="subject" name="subject"></div>
+    <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="4" required></textarea></div>
+    <button class="btn btn-forest" type="submit">Send message</button>
+   </form>
+  </div>
+  <div class="info-block">
+   <div class="info-item"><b>Association</b><span>Yujilife (HOPE) · Association No. 2403</span></div>
+   <div class="info-item"><b>Email</b><span>hmoufti@gmail.com</span></div>
+   <div class="info-item"><b>Website</b><span>yujilife.org</span></div>
+   <div class="info-item"><b>Our work</b><span>Animal welfare · Environment · Women's empowerment · Inclusive education</span></div>
+   <div class="info-item"><b>Standards</b><span>Guided by UN human standards and values</span></div>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="foot-grid">
+   <div class="foot-brand">
+    <div class="brand" style="font-size:1.2rem">
+     <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#40916C"/><path d="M20 30c-6-4-10-8-10-13a5 5 0 0 1 10-2 5 5 0 0 1 10 2c0 5-4 9-10 13z" fill="#F5F1E8"/></svg>
+     <span>YUJILIFE</span>
+    </div>
+    <p>A humanitarian association for animals, people and the planet — built on compassion and dignity.</p>
+   </div>
+   <div><h4>Programs</h4><a href="#pillars">Animal welfare</a><a href="#pillars">Environment</a><a href="#pillars">Women's empowerment</a><a href="#pillars">Inclusive education</a></div>
+   <div><h4>Explore</h4><a href="#training">Training Centre</a><a href="#standards">UN Standards</a><a href="#news">News</a><a href="#act">Get involved</a></div>
+   <div><h4>Contact</h4><a href="#contact">Message us</a><a href="mailto:hmoufti@gmail.com">hmoufti@gmail.com</a><a href="/admin/">Content manager</a></div>
+  </div>
+  <div class="foot-bottom">
+   <span>© 2026 Yujilife (HOPE) · Association No. 2403. All rights reserved.</span>
+   <span>Compassion in action.</span>
+  </div>
+ </div>
+</footer>
+
+</body>
+</html>
