@@ -94,7 +94,12 @@ section{padding:5rem 0}
 .pillar h3{font-size:1.35rem;margin-bottom:.5rem;color:var(--forest)}
 .pillar p{color:#4a5751;font-size:.98rem}
 .pillar .tag{position:absolute;top:1.1rem;right:1.1rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);background:rgba(201,162,39,.14);padding:.25rem .6rem;border-radius:999px}
-
+/* Campaign poster */
+.campaign{background:var(--paper)}
+.campaign-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:3rem;align-items:center}
+.campaign-media{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:var(--sand)}
+.campaign-media img{width:100%;height:auto;display:block}
+.campaign-text p{color:#4a5751;margin:1rem 0 1.6rem}
 /* Training centre feature */
 .training{background:linear-gradient(160deg,var(--forest),var(--forest-deep));color:#fff}
 .training-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
@@ -159,7 +164,7 @@ footer{background:var(--forest-deep);color:rgba(255,255,255,.82);padding:3.5rem 
 .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:1.4rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.82rem;color:rgba(255,255,255,.55)}
 
 @media(max-width:900px){
-  .hero-grid,.training-grid,.std-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
+  .hero-grid,.training-grid,.std-grid,.contact-grid,.campaign-grid{grid-template-columns:1fr;gap:2rem}
   .pillar-grid,.news-grid{grid-template-columns:1fr 1fr}
   .stat-grid{grid-template-columns:1fr 1fr;gap:2rem}
   .foot-grid{grid-template-columns:1fr 1fr}
@@ -300,7 +305,20 @@ footer{background:var(--forest-deep);color:rgba(255,255,255,.82);padding:3.5rem 
   </div>
  </div>
 </section>
-
+<!-- CAMPAIGN POSTER -->
+<section class="campaign" id="campaign">
+ <div class="wrap campaign-grid">
+  <div class="campaign-media">
+   <img src="hope-campaign-poster.jpg" alt="Yujilife Association HOPE campaign poster: a 3D model of the HOPE campus rising through a torn map of Syria, surrounded by icons for animal protection, women's empowerment, inclusive education for children with special needs, environmental care, and the training centre." loading="lazy">
+  </div>
+  <div class="campaign-text">
+   <span class="eyebrow">Our campaign</span>
+   <h2>Introducing the HOPE campus</h2>
+   <p>This is HOPE — the home Yujilife is building for Syria's most vulnerable: shelter, inclusive education, healthcare and second chances, standing on five promises — animal protection, women's empowerment, care for children with special needs, environmental stewardship, and hands-on training.</p>
+   <a class="btn btn-gold" href="#act">Support the campaign</a>
+  </div>
+ </div>
+</section>
 <!-- TRAINING CENTRE -->
 <section class="training" id="training">
  <div class="wrap training-grid">
